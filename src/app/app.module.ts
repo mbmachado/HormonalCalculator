@@ -3,9 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbTabsetModule, NbCardModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
+
+const NB_MEDULES = [
+  NbCardModule,
+  NbTabsetModule,
+];
 
 @NgModule({
   declarations: [
@@ -14,10 +19,12 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'corporate' }),
+    NbThemeModule.forRoot({ name: 'pharma' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    ...NB_MEDULES
   ],
   providers: [],
   bootstrap: [AppComponent]
