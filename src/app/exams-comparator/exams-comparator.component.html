@@ -1,0 +1,33 @@
+<h1 class="h6 text-center mt-3 mb-2">
+  Qual é o gênero do paciente?
+</h1>
+<nb-radio-group name="gender-radio-group"
+                class="d-flex justify-content-center"
+                [formControl]="gender">
+  <nb-radio value="male">Masculino</nb-radio>
+  <nb-radio value="female">Feminino</nb-radio>
+</nb-radio-group>
+
+
+<form [formGroup]="form">
+
+  <table class="w-100">
+    <thead>
+      <th scope="col">EXAME</th>
+      <th scope="col">REFERÊNCIA</th>
+    </thead>
+    <tbody>
+      <td class="p-0">
+        <label for="control1" class="label d-block pt-3">25-hidroxivitamina D:</label>
+        <input  id="control1"
+                type="number"
+                class="d-block w-100 bg-transparent border-0 m-0 py-3 pl-0"
+                placeholder="Digite o resultado">
+      </td>
+      <td >
+        Lorem ipsum dolor sit, amet consectetur adipi!
+      </td>
+    </tbody>
+  </table>
+
+</form>
