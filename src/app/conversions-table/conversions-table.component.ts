@@ -12,4 +12,8 @@ export class ConversionsTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  notAvailable(): void {
+    alert('Faltando especificar o fator de conversão.');
+  }
+
 }

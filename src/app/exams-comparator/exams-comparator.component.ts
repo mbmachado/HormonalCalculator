@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { tap } from 'rxjs/operators';
 import { exams } from '../data-structures';
+
+interface Exam {
+  name: string;
+  references: {
+    male: { min: number, max: number },
+    female: { min: number, max: number },
+  };
+}
 
 @Component({
   selector: 'hcl-exams-comparator',
@@ -11,18 +17,45 @@ import { exams } from '../data-structures';
 export class ExamsComparatorComponent implements OnInit {
 
   exams = exams;
-  form: FormGroup;
-  gender = new FormControl('male');
+  results: any = {};
+  gender = 'male';
 
-  constructor(formBuilder: FormBuilder) {
-    this.form = formBuilder.group({
-      control1: []
-    });
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.form.valueChanges.pipe(tap(console.log)).subscribe();
-    this.gender.valueChanges.pipe(tap(console.log)).subscribe();
+  }
+
+  getText(exam: Exam): string {
+
+    if (exam.references[this.gender].min >= 0) {
+
+      return 'Entre ' +
+        exam.references[this.gender].min + ' e ' +
+        exam.references[this.gender].max + '.';
+
+    }
+
+    return 'Abaixo de ' + exam.references[this.gender].max + '.';
+
+  }
+
+  getBackground(exam: Exam, index: number): { in: boolean, out: boolean } {
+
+    const result = +this.results['exam' + index];
+
+    if (!result) {
+      return { in: false, out: false };
+    }
+
+    if (
+      result >= exam.references[this.gender].min &&
+      result <= exam.references[this.gender].max
+    ) {
+      return { in: true, out: false };
+    }
+
+    return { in: false, out: true };
+
   }
 
 }

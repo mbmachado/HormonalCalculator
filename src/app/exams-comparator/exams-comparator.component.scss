@@ -5,10 +5,27 @@ table {
     border-bottom: 1px solid #edf1f7;
     padding: 16px 0;
     width: 50%;
+    transition: padding .1s ease-in;
   }
 
 }
 
 input {
   outline: none;
+}
+
+.in {
+  background-color: #D7F398;
+
+  td:first-child {
+     padding-left: 8px;
+  }
+}
+
+.out {
+  background-color: #FAC4A4;
+
+  td:first-child {
+    padding-left: 8px;
+ }
 }

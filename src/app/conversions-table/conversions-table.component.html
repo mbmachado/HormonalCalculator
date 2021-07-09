@@ -1,1 +1,111 @@
-<p>conversions-table works!</p>
+<form #form="ngForm" class="d-block mx-auto conversions-form mt-4">
+  <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-end">
+      <label for="nmol-per-l-1" class="label text-center text-sm-right mb-sm-0 mr-0 mr-sm-2">nmol/L</label>
+      <input type="text" nbInput fullWidth id="nmol-per-l-1">
+    </div>
+    <div class="d-flex flex-column justify-content-center">
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2 mb-2" type="button">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+      </button>
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2" type="button">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+      </button>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-start">
+      <input type="text" nbInput fullWidth id="ng-per-dl-1" class="order-1 order-sm-0">
+      <label for="ng-per-dl-1" class="label text-center text-sm-left mb-sm-0 ml-0 ml-sm-2 order-0 order-sm-1">ng/dL</label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-end">
+      <label for="ng-per-dl-2" class="label text-center text-sm-right mb-sm-0 mr-0 mr-sm-2">ng/dL</label>
+      <input type="text" nbInput fullWidth id="ng-per-dl-2">
+    </div>
+    <div class="d-flex flex-column justify-content-center">
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2 mb-2" type="button">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+      </button>
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2" type="button">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+      </button>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-start">
+      <input type="text" nbInput fullWidth id="pg-per-ml-2" class="order-1 order-sm-0">
+      <label for="pg-per-ml-2" class="label text-center text-sm-left mb-sm-0 ml-0 ml-sm-2 order-0 order-sm-1">pg/mL</label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-end">
+      <label for="nmol-per-l-3" class="label text-center text-sm-right mb-sm-0 mr-0 mr-sm-2">nmol/L</label>
+      <input type="text" nbInput fullWidth id="nmol-per-l-3">
+    </div>
+    <div class="d-flex flex-column justify-content-center">
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2 mb-2" type="button">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+      </button>
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2" type="button">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+      </button>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-start">
+      <input type="text" nbInput fullWidth id="pmol-per-l-3" class="order-1 order-sm-0">
+      <label for="pmol-per-l-3" class="label text-center text-sm-left mb-sm-0 ml-0 ml-sm-2 order-0 order-sm-1">pmol/L</label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-end">
+      <label for="pmol-per-l-4" class="label text-center text-sm-right mb-sm-0 mr-0 mr-sm-2">pmol/L</label>
+      <input type="text" nbInput fullWidth id="pmol-per-l-4">
+    </div>
+    <div class="d-flex flex-column justify-content-center">
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2 mb-2" type="button">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+      </button>
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2" type="button">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+      </button>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-start">
+      <input type="text" nbInput fullWidth id="pg-per-ml-4" class="order-1 order-sm-0">
+      <label for="pg-per-ml-4" class="label text-center text-sm-left mb-sm-0 ml-0 ml-sm-2 order-0 order-sm-1">pg/L</label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between mb-4">
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-end">
+      <label for="ng-per-ml-5" class="label text-center text-sm-right mb-sm-0 mr-0 mr-sm-2">ng/mL</label>
+      <input type="text" nbInput fullWidth id="ng-per-ml-5">
+    </div>
+    <div class="d-flex flex-column justify-content-center">
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2 mb-2" type="button">
+        <nb-icon icon="arrow-forward-outline"></nb-icon>
+      </button>
+      <button nbButton (click)="notAvailable()" status="basic" class="d-block mx-2" type="button">
+        <nb-icon icon="arrow-back-outline"></nb-icon>
+      </button>
+    </div>
+    <div class="d-flex flex-column flex-sm-row align-items-center
+                justify-content-center justify-content-sm-start">
+      <input type="text" nbInput fullWidth id="ng-per-dl-5" class="order-1 order-sm-0">
+      <label for="ng-per-dl-5" class="label text-center text-sm-left mb-sm-0 ml-0 ml-sm-2 order-0 order-sm-1">ng/dL</label>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button nbButton hero status="primary" type="reset" shape="semi-round">Limpar</button>
+  </div>
+
+</form>

@@ -3,12 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbTabsetModule, NbCardModule, NbInputModule, NbButtonModule, NbRadioModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ExamsComparatorComponent } from './exams-comparator/exams-comparator.component';
 import { ConversionsTableComponent } from './conversions-table/conversions-table.component';
+
+import {
+  NbThemeModule,
+  NbLayoutModule,
+  NbTabsetModule,
+  NbCardModule,
+  NbInputModule,
+  NbButtonModule,
+  NbRadioModule,
+  NbIconModule
+} from '@nebular/theme';
 
 const NB_MEDULES = [
   NbCardModule,
@@ -16,6 +26,7 @@ const NB_MEDULES = [
   NbInputModule,
   NbButtonModule,
   NbRadioModule,
+  NbIconModule,
 ];
 
 @NgModule({
@@ -31,7 +42,7 @@ const NB_MEDULES = [
     NbLayoutModule,
     NbEvaIconsModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    FormsModule,
 
     ...NB_MEDULES
   ],
